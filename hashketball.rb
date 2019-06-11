@@ -188,7 +188,15 @@ def big_shoe_rebounds
   return rebound
  end 
  def most_points_scored
+   most_points = 0
    game_hash.each do |location, value|
+     value[:players].each do |k, v|
+       if v[:points] > most_points
+         most_points = v
+        end 
+    end 
+  end
+  return points
  end 
  def winning_team
    
@@ -199,8 +207,4 @@ def big_shoe_rebounds
  def long_name_steals_a_ton
    
  end
-  game_hash.each do |location, value|
-    value.each do |k, v|
-   end     
-  end 
-end
+  
