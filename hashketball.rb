@@ -189,7 +189,7 @@ def big_shoe_rebounds
  end 
  def most_points_scored
    most_points = 0
-   players
+   players = 0
    game_hash.each do |location, value|
      value[:players].each do |k, v|
        if v[:points] > most_points
