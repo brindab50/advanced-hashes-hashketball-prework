@@ -193,11 +193,12 @@ def big_shoe_rebounds
    game_hash.each do |location, value|
      value[:players].each do |k, v|
        if v[:points] > most_points
-         most_points = v
+         most_points = v[:points]
+         player = v[:players]
         end 
     end 
   end
-  return points
+  return player
  end 
  
  def winning_team
